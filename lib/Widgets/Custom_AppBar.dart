@@ -66,17 +66,44 @@ class Custom_AppBar extends StatelessWidget {
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                   color: AppColors.carbg,
                   borderRadius: BorderRadius.circular(15),
-                  boxShadow:[ BoxShadow(color: Colors.black.withOpacity(0.05),
-                  blurRadius: 10,
-                  offset: Offset(0, 5),
-                  )]),
-                  child: Row(children: [
-                    TextField()
-                  ],),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 10,
+                      offset: const Offset(0, 5),
+                    )
+                  ]),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          hintText: 'Search for your dream car ',
+                          prefixIcon: const Icon(Icons.search),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide.none)),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                        color: AppColors.secondary.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Icon(
+                      Icons.tune,
+                      color: AppColors.secondary,
+                      size: 20,
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ));
