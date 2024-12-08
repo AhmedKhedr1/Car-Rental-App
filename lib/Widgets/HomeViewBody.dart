@@ -1,6 +1,8 @@
 import 'package:carrentalapp/Colors.dart';
+import 'package:carrentalapp/Widgets/Carlisttile.dart';
 import 'package:carrentalapp/Widgets/carcard.dart';
 import 'package:carrentalapp/data/data.dart';
+
 import 'package:flutter/material.dart';
 
 class Homeviewbody extends StatefulWidget {
@@ -45,6 +47,7 @@ class _HomeviewbodyState extends State<Homeviewbody> {
                     });
                   },
                   child: Container(
+                    margin: EdgeInsets.all(6),
                     decoration: BoxDecoration(
                         color:
                             isselected ? AppColors.secondary : AppColors.carbg,
@@ -94,7 +97,6 @@ class _HomeviewbodyState extends State<Homeviewbody> {
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-           //   physics: const NeverScrollableScrollPhysics(),
               itemCount: Featuredcars.length,
               itemBuilder: (context, index) {
                 return carcard(
@@ -103,6 +105,39 @@ class _HomeviewbodyState extends State<Homeviewbody> {
               },
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Popular Deals',
+                style: TextStyle(
+                    color: AppColors.textdark,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
+              ),
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'View All',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.secondary),
+                  )),
+            ],
+          ),
+          SizedBox(
+            child: ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: Featuredcars.length,
+              itemBuilder: (context, index) {
+                return carListTile(
+                  featuredCar: Featuredcars[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );

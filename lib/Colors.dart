@@ -4,7 +4,7 @@ class AppColors{
   static const primary=Color(0xff2c3e50);
   static const secondary =Color(0xffe74c3c);
   static const accent =Color(0xff3498db);
-  static const background =Color(0xfff8f9fa);
+  static const background =Color.fromARGB(255, 230, 232, 234);
   static const carbg =Colors.white;
   static const textdark =Color(0xff2c3e50);
   static const textlight =Color(0xff95a5a6);

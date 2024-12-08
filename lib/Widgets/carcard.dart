@@ -1,6 +1,6 @@
+
 import 'package:carrentalapp/models/CarModel.dart';
 import 'package:flutter/material.dart';
-
 class carcard extends StatelessWidget {
   const carcard({super.key, required this.featuredCar});
   final car featuredCar;
@@ -11,6 +11,10 @@ class carcard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(14)
+          ),
          width: 220,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
