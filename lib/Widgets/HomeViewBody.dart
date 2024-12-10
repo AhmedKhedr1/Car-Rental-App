@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:carrentalapp/Colors.dart';
 import 'package:carrentalapp/Widgets/Carlisttile.dart';
 import 'package:carrentalapp/Widgets/carcard.dart';
@@ -47,7 +48,7 @@ class _HomeviewbodyState extends State<Homeviewbody> {
                     });
                   },
                   child: Container(
-                    margin: EdgeInsets.all(6),
+                    margin:const EdgeInsets.all(6),
                     decoration: BoxDecoration(
                         color:
                             isselected ? AppColors.secondary : AppColors.carbg,
@@ -83,7 +84,9 @@ class _HomeviewbodyState extends State<Homeviewbody> {
                     fontSize: 18),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                  
+                  },
                   child: const Text(
                     'View All',
                     style: TextStyle(
