@@ -10,7 +10,7 @@ class carcard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return Cardetailsview() ;
+                      return Cardetailsview(featuredCar: featuredCar, ) ;
                     },));
       },
       child: Padding(

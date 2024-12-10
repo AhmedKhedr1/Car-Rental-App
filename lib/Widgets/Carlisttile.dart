@@ -1,5 +1,4 @@
 import 'package:carrentalapp/Views/CarDetailsView.dart';
-import 'package:carrentalapp/data/data.dart';
 import 'package:carrentalapp/models/CarModel.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ class carListTile extends StatelessWidget {
     return GestureDetector(
       onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return Cardetailsview() ;
+                      return Cardetailsview(featuredCar: featuredCar, ) ;
                     },));
       },
       child: Container(
