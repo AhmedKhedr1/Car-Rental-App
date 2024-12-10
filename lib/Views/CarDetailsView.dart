@@ -1,4 +1,5 @@
 import 'package:carrentalapp/Colors.dart';
+import 'package:carrentalapp/Widgets/CarFeature.dart';
 import 'package:carrentalapp/Widgets/CustomCard.dart';
 import 'package:carrentalapp/Widgets/CustomTextButton.dart';
 import 'package:carrentalapp/models/CarModel.dart';
@@ -149,7 +150,7 @@ class Cardetailsview extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 26,
+                    height: 30,
                   ),
                   const Text(
                     'Specifications',
@@ -182,7 +183,7 @@ class Cardetailsview extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 26,
+                    height: 30,
                   ),
                   const Text(
                     'Features',
@@ -191,7 +192,24 @@ class Cardetailsview extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
-                  
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      CarFeature(label: 'Bluetooth'),
+                      CarFeature(label: 'Apple CarPlay'),
+                      CarFeature(label: 'Android Auto'),
+                      CarFeature(label: '360 Camera'),
+                      CarFeature(label: 'Parking Sensors'),
+                      CarFeature(label: 'Navigation')
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
                 ],
               ),
             ),
