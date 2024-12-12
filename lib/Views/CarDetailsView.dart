@@ -244,7 +244,7 @@ class Cardetailsview extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 110,
                       ),
                     ],
                   ),
@@ -288,13 +288,14 @@ class Cardetailsview extends StatelessWidget {
                     TextButton(
                         style: TextButton.styleFrom(
                             backgroundColor: AppColors.secondary,
-                            padding:const EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 42, vertical: 12),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12))),
                         onPressed: () {},
                         child: const Text(
                           'Book Now',
-                          style: TextStyle(color: Colors.white,fontSize: 12),
+                          style: TextStyle(color: Colors.white, fontSize: 12),
                         ))
                   ],
                 ),
